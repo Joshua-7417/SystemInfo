@@ -48,6 +48,7 @@
 	https://github.com/Joshua-7417/SystemInfo
 
 .NOTES
+    Version: 1.0
     Author: Joshua
 #>
 
