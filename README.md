@@ -18,6 +18,31 @@ Download [SystemInfo](https://github.com/Joshua-7417/SystemInfo/releases/latest/
 > [!NOTE]
 > By default, Windows may block running scripts. You may need to change your execution policy with [Set-ExecutionPolicy](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.security/set-executionpolicy).
 
+## Parameters
+No parameters are required to run the script, but the following optional parameters are available:
+
+| Parameter  | Description                                                                |
+|------------|----------------------------------------------------------------------------|
+| `-Export`  | Exports a timestamped `.log` file to the Desktop.                          |
+| `-Section` | Display only a specific section. If not specified, all sections are shown. |
+
+The script can also be run for specific sections only, with the following available:
+| Section       | Description                                  |
+|---------------|----------------------------------------------|
+| `Uptime`      | Displays system uptime                       |
+| `OS`          | Displays operating system information        |
+| `Users`       | Displays active user accounts                |
+| `CPU`         | Displays CPU details                         |
+| `RAM`         | Displays RAM details                         |
+| `Motherboard` | Displays motherboard details                 |
+| `GPU`         | Displays GPU and monitor information         |
+| `Network`     | Displays network adapters and IP information |
+| `Storage`     | Displays disk and storage information        |
+| `USB`         | Displays connected USB devices               |
+| `Hotfixes`    | Displays installed Windows updates           |
+| `Programs`    | Displays installed programs                  |
+| `Services`    | Displays running Windows services            |
+
 ## Examples
 
 ### Run All Sections
