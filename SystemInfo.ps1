@@ -10,9 +10,6 @@
     Use -Export to save the output to a timestamped .log file on your Desktop.
     Use -Section to display only one specific category of information.
 
-    The script requires administrator privileges and will automatically prompt for
-    elevation if not already running as an administrator.
-
 .PARAMETER Export
     Saves the console output to a timestamped .log file on the Desktop.
     The file is named:  SystemInfo_<YYYY-MM-DD_HH-mm-ss>.log
@@ -58,12 +55,6 @@ param (
     [ValidateSet("Uptime","OS","Users","CPU","RAM","Motherboard","GPU","Network","Storage","USB","Hotfixes","Programs","Services","")]
     [string]$Section = ""
 )
-
-# If not running as administrator, relaunch elevated and exit current process
-If (!([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]'Administrator')) {
-    Start-Process PowerShell.exe -ArgumentList ("-NoProfile -ExecutionPolicy Bypass -File `"{0}`"" -f $PSCommandPath) -Verb RunAs
-    Exit
-}
 
 # ------------------------------------------------------------------
 # Log buffer - plain-text lines collected when -Export is active
