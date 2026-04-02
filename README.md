@@ -2,10 +2,23 @@
 A PowerShell script that collects and displays detailed hardware and software information, including OS, CPU, GPU, RAM, storage, network adapters, installed programs, Windows updates, and running services.
 
 ## Usage
-Download [SystemInfo](https://github.com/Joshua-7417/SystemInfo/releases/download/v1.0/SystemInfo.ps1)
+
+### Method 1 - Run Directly in PowerShell
+Open PowerShell and paste the following command:
+
+```
+irm https://github.com/Joshua-7417/SystemInfo/releases/latest/download/SystemInfo.ps1 | iex
+```
+
+### Method 2 - Download and Run
+You can also download the script and run it locally:
+
+Download [SystemInfo](https://github.com/Joshua-7417/SystemInfo/releases/latest/download/SystemInfo.ps1)
 
 > [!NOTE]
-> By default, Windows may block running scripts. You may need to change your exectuion policy with [Set-ExecutionPolicy](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.security/set-executionpolicy).
+> By default, Windows may block running scripts. You may need to change your execution policy with [Set-ExecutionPolicy](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.security/set-executionpolicy).
+
+## Examples
 
 ### Run All Sections
 Runs all sections and prints the results to the console.
@@ -36,7 +49,7 @@ PS> .\SystemInfo.ps1 -Section OS
 <img width="972" height="512" alt="Run Specific Section" src="https://github.com/user-attachments/assets/a7605abc-cac5-49e1-95ab-f8e68884c1db" />
 
 
-### Run Specific Section with Export
+### Run Specific Section with Export Log
 Displays GPU section and exports it to a timestamped .log file to the Desktop.
 
 ```
